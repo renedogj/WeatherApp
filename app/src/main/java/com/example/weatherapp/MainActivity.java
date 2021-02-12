@@ -34,7 +34,7 @@ import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
-    final String API_KEY = "5ae8594f868a4f122b834a6a77754d53";
+    final String API_KEY = "Introduce tu API_KEY";
 
     androidx.constraintlayout.widget.ConstraintLayout mainActivy;
 
