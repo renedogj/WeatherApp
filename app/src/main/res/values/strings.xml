@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">WeatherApp</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="botonAceptarCoordenadas">Aceptar</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="sensacion_termica">Sensacion Termica</string>
+    <string name="humedad">Humedad</string>
+    <string name="prersi_n_atmosf_rica">Prersión atmosférica</string>
+    <string name="velocidad_del_viento">Velocidad del viento</string>
+    <string name="temperatura_m_nima">Temperatura mínima</string>
+    <string name="temperatura_m_xima">Temperatura máxima</string>
+    <string name="Coloque_chincheta">Para obtener el tiempo de un lugar coloque en él la chincheta y pulse aceptar</string>
+    <string name="coordenadas_default">Coordenadas: 00.000,00.000</string>
+</resources>
