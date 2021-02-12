@@ -297,39 +297,4 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
-    public void recuperarTiempoCiudad(String ciudad){
-        FeedReaderDbHelper dbHelper = new FeedReaderDbHelper(this);
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        String[] columnasARetornar = {
-                FeedReaderContract.TiempoCiudades._ID,
-                FeedReaderContract.TiempoCiudades.CIUDAD,
-                FeedReaderContract.TiempoCiudades.TIEMPO_ATMOSFERICO,
-                FeedReaderContract.TiempoCiudades.DESCRIPCION_TIEMPO_ATMOSFERICO,
-                FeedReaderContract.TiempoCiudades.TEMPERATURA,
-                FeedReaderContract.TiempoCiudades.SENSACION_TERMICA,
-                FeedReaderContract.TiempoCiudades.MIN_TEMPERATURA,
-                FeedReaderContract.TiempoCiudades.MAX_TEMPERATURA,
-                FeedReaderContract.TiempoCiudades.PRESION_ATMOSFERICA,
-                FeedReaderContract.TiempoCiudades.HUMEDAD,
-                FeedReaderContract.TiempoCiudades.VELOCIDAD_VIENTO
-        };
-        String columnaWhere = FeedReaderContract.TiempoCiudades._ID + " = ?";
-        String[] valorWhere = {ciudad };
-        Cursor cursorConsulta = db.query(
-                FeedReaderContract.TiempoCiudades.TABLE_NAME,   // The table to query
-                columnasARetornar,             // The array of columns to return (pass null to get all)
-                columnaWhere,              // The columns for the WHERE clause
-                valorWhere,          // The values for the WHERE clause
-                null,                   // don't group the rows
-                null,                   // don't filter by row groups
-                null               // The sort order
-        );
-        while(cursorConsulta.moveToNext()){
-            //et_id.setText(cursorConsulta.getLong(cursorConsulta.getColumnIndexOrThrow(FeedReaderContract.FeedEntry._ID))+"");
-            //et_nombre.setText(cursorConsulta.getString(cursorConsulta.getColumnIndexOrThrow(FeedReaderContract.FeedEntry.COLUMN_NAME_1)));
-            //et_valor.setText(cursorConsulta.getLong(cursorConsulta.getColumnIndexOrThrow(FeedReaderContract.FeedEntry.COLUMN_NAME_2))+"");
-        }
-        cursorConsulta.close();
-    }
 }
