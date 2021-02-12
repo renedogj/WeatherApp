@@ -53,7 +53,7 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
         LatLng latLngMarcador = new LatLng(0,0);
         markerDefault = googleMap.addMarker(new MarkerOptions()
                 .position(latLngMarcador)
-                .title("default")
+                .title("Marcador")
                 .draggable(true)
         );
 
@@ -69,16 +69,14 @@ public class MapsFragment extends Fragment implements OnMapReadyCallback, Google
     @Override
     public void onMarkerDrag(Marker marker) {
         if(marker.equals(markerDefault)){
-            coordenadas[0] = (double) marker.getPosition().latitude;
-            coordenadas[1] = (double) marker.getPosition().longitude;
+            coordenadas[0] = marker.getPosition().latitude;
+            coordenadas[1] = marker.getPosition().longitude;
             viewModel.selectItem(coordenadas);
         }
     }
 
     @Override
     public void onMarkerDragEnd(Marker marker) {
-        /*Bundle bundle = new Bundle();
-        bundle.getString("some_int","this");*/
-        //Intent intent = new Intent(MapsActivity.class,MainActivity.class);
+
     }
 }
